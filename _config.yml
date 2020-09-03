@@ -20,7 +20,7 @@ title                    : "위찬의 공부 블로그"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "강위찬"
-description              : "email: wichan1255@gmail.com"
+description              : "위찬의 공부 블로그입니다."
 url                      : "https://github.com/wichan7/wichan7.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -95,7 +95,7 @@ analytics:
 author:
   name             : "강위찬"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "email: *wichan1255@gmail.com*"
+  bio              : "email: **wichan1255@gmail.com**  github: **wichan7**"
   location         : "Seoul"
   email            :
   links:
