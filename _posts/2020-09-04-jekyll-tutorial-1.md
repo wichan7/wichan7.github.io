@@ -1,9 +1,9 @@
 ---
 title: "[Jekyll] Minimal-Mistakes테마로 Github블로그 만들기! -1"
 categories: 
-  - Jekyll
+  - jekyll
 tags:
-  - minimal-mistakes
+  - minimal mistakes
   - jekyll
   - tutorial
   
