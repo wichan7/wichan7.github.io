@@ -30,7 +30,8 @@ tags:
 그리고 그 prompt창에서 아래의 2가지 명령어를 실행합니다.  
 1. gem install bundler  
 2. gem install jekyll  
-bundler는 의존성을 편하게 관리해주는 역할을 합니다.  
+
+bundler는 의존성을 편하게 관리하게 해주는 역할을 합니다.  
 
 ## step3
 깃허브에서 레포지토리를 생성합니다. 
