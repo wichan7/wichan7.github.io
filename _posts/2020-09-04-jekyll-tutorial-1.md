@@ -18,7 +18,7 @@ tags:
 > [5. Github에 띄우기](#step5)  
 
 ## step1
-- Jekyll(지킬)은 정적 사이트를 생성해줍니다. 지킬으로 블로그를 수정하고 즉각 로컬 상에서 확인하기 위해서 설치해줍니다.  
+- Jekyll(지킬)은 정적 사이트를 생성해줍니다. 지킬으로 블로그를 수정하고 즉각 로컬 상에서 확인하기 위해 설치합니다.  
 - 지킬은 Ruby를 통해 다운로드 받을 수 있는데 이를 위해 Ruby를 다운로드 받습니다.  
 [Ruby 다운로드 페이지](https://rubyinstaller.org/downloads/){: target="_blank"}  
 
@@ -30,13 +30,14 @@ tags:
 그리고 그 prompt창에서 아래의 2가지 명령어를 실행합니다.  
 1. gem install bundler  
 2. gem install jekyll  
+bundler는 의존성을 편하게 관리해주는 역할을 합니다.  
 
 ## step3
 깃허브에서 레포지토리를 생성합니다. 
 
 {% raw %}![alt](/assets/images/jekyll_tutorial/github_create_repository.png){% endraw %}  
 
-레포지토리 주소를 이렇게 만들면 "http://wichan7.github.io" 이런식으로 접근이 가능해집니다. (Github 적용이 느려서 기다렸다가 확인해야합니다)  
+레포지토리 주소를 이렇게 만들면 "http://wichan7.github.io" 형식으로 접근이 가능해집니다. (Github 적용이 느려서 기다렸다가 확인해야합니다)  
 
 
 ## step4
