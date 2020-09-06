@@ -9,7 +9,8 @@ toc: true
 ---
 # DFS란?  
 DFS란 Depth First Search의 약자로 하나의 정점을 깊게 파고들어 탐색하는 방식입니다.  
-Tree의 preorder 방식과 같다.  
+스택을 이용하여 구현할 수 있으며, 재귀 함수의 특징을 통한 구현이 일반적입니다.  
+아래는 java로 구현한 코드입니다.  
 
 # DFS 구현 전체 코드
 ~~~ java
