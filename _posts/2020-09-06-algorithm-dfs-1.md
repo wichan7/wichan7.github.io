@@ -7,9 +7,9 @@ tags:
   - dfs
 toc: true
 ---
-# DFS 개념의 이해  
-{% raw %}![alt](https://upload.wikimedia.org/wikipedia/commons/7/7f/Depth-First-Search.gif){% endraw %}  
-(추가 예정)
+# DFS란?  
+DFS란 Depth First Search의 약자로 하나의 정점을 깊게 파고들어 탐색하는 방식입니다.  
+Tree의 preorder 방식과 같다.  
 
 # DFS 구현 전체 코드
 ~~~ java
@@ -36,11 +36,6 @@ class AdjGraph{
 	public void add(int x, int y) {
 		graph[x][y] = 1;
 		graph[y][x] = 1;
-	}
-	
-	//단방향 간선 추가
-	public void addSingle(int x, int y) {
-		graph[x][y] = 1;
 	}
 	
 	//인접행렬 출력
