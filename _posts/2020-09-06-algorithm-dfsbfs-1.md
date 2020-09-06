@@ -1,19 +1,28 @@
 ---
-title: "[알고리즘] 인접행렬로 DFS구현하기."
+title: "[알고리즘] Java로 DFS, BFS구현하기"
 categories: 
   - algorithm
 tags:
   - algorithm
   - dfs
+  - bfs
+  - java
 toc: true
 ---
 # DFS란?  
 DFS란 Depth First Search의 약자로 하나의 정점을 깊게 파고들어 탐색하는 방식입니다.  
 스택을 이용하여 구현할 수 있으며, 재귀 함수의 특징을 통한 구현이 일반적입니다.  
-아래는 java로 구현한 코드입니다.  
+<br>
 
-# DFS 구현 전체 코드
+# BFS란?  
+BFS란 Breadth First Search의 약자로 DFS처럼 하나의 경로를 깊게 탐색하지 않고 넓게 검사합니다.  
+큐를 이용하여 구현할 수 있습니다.  
+<br>
+
+# 구현 전체 코드 (Java)
 ~~~ java
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Scanner;
 
 /* 인접행렬 그래프 클래스
@@ -39,6 +48,19 @@ class AdjGraph{
 		graph[y][x] = 1;
 	}
 	
+	//단방향 간선 추가
+	public void addSingle(int x, int y) {
+		graph[x][y] = 1;
+	}
+	
+	
+	//visited 초기화
+	public void clear() {
+		for(int i=1; i<=nV; i++) {
+			hasVisited[i] = false;
+		}
+	}
+	
 	//인접행렬 출력
 	public void print() {
 		System.out.println("= 인접행렬 출력 =");
@@ -57,8 +79,7 @@ class AdjGraph{
 		
 		/*
 		 * i가 1부터 끝까지 돌며 자신과 연결된 정점을 찾음.
-		 * 정점을 찾았다면 잠시 함수를 멈추고 
-		 * 다음 dfs(i)를 실행했다가 처리가 모두 완료되면 돌아옴.
+		 * 정점을 찾았다면 잠시 함수를 멈추고 다음 dfs(i)를 실행했다가 처리가 모두 완료되면 돌아옴.
 		 * 따라서 깊이우선탐색이 가능함.
 		 */
 		for(int i=1; i<=nV; i++) {
@@ -68,8 +89,32 @@ class AdjGraph{
 		}
 	}
 	
+	//BFS Logic
+	public void bfs(int idx) {
+		Queue<Integer> queue = new LinkedList<>();
+		
+		// queue에 시작 정점 추가.
+		queue.add(idx);
+		hasVisited[idx] = true;
+		
+		while( !queue.isEmpty() ) {
+			// poll: pop하고 pop된 값 반환
+			idx = queue.poll();
+			System.out.print(idx + " ");
+			
+			for(int i=1; i<=nV; i++) {
+				if (graph[idx][i] == 1 && hasVisited[i] == false) {
+					//queue에 인접 정점 삽입
+					queue.add(i);
+					//방문처리
+					hasVisited[i] = true;
+				}
+			}
+			
+		}
+	}
+	
 }
-
 
 // Main이 있는 클래스
 public class GraphViewer {
@@ -95,8 +140,14 @@ public class GraphViewer {
 		//인접행렬 프린트하기
 		graph.print();
 		
-		System.out.print("정점 1부터 탐색한 결과: ");
+		//DFS로 출력
+		System.out.print("DFS로 정점 1부터 탐색한 결과: ");
 		graph.dfs(1);
+		
+		//BFS로 출력. clear로 visited 초기화
+		graph.clear();
+		System.out.print("BFS로 정점 1부터 탐색한 결과: ");
+		graph.bfs(1);
 		
 		sc.close();
 	}
@@ -107,7 +158,13 @@ public class GraphViewer {
 	}
 }
 ~~~
+<br>
 
+# 그래프 & 실행 결과  
+{% raw %}
+![alt](/assets/images/algorithm/dfsbfs/graph.png)
+![alt](/assets/images/algorithm/dfsbfs/output.png)
+{% endraw %}  
 
-
+<br><br>
 [Graph 그리는 사이트](https://csacademy.com/app/graph_editor/)
