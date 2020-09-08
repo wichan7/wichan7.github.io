@@ -28,8 +28,8 @@ tags:
 ## step2
 윈도우 검색에서 **Start Command Prompt With Ruby**를 찾아 실행시켜줍니다.  
 그리고 그 prompt창에서 아래의 2가지 명령어를 실행합니다.  
-1. gem install bundler  
-2. gem install jekyll  
+1. `gem install bundler`  
+2. `gem install jekyll`  
 
 bundler는 의존성을 편하게 관리하게 해주는 역할을 합니다.  
 
@@ -51,8 +51,8 @@ bundler는 의존성을 편하게 관리하게 해주는 역할을 합니다.
 {% raw %}![alt](/assets/images/jekyll_tutorial/jekyll_config.png){% endraw %}  
 
 - Ruby prompt에서 **"cd C:\\Blog"** 명령어로 작업공간을 이동합니다.  
-1. "bundle install"을 한번 실행해줍니다.  
-2. "bundle exec jekyll serve" 명령어로 이제부터 서버를 구동시킬 수 있습니다.  
+1. `bundle install`을 한번 실행해줍니다.  
+2. `bundle exec jekyll serve` 명령어로 이제부터 서버를 구동시킬 수 있습니다.  
 - 서버를 구동하게 되면 이제 Chrome에서 localhost:4000으로 접속할 수 있게 됩니다.  
 - Minimal-Mistakes 테마 적용까지 완료했습니다.  
 

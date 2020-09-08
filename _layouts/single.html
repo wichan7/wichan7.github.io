@@ -27,7 +27,14 @@ layout: default
       {% unless page.header.overlay_color or page.header.overlay_image %}
         <header>
           {% if page.title %}<h1 id="page-title" class="page__title" itemprop="headline">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</h1>{% endif %}
-          {% include page__meta.html %}
+          {% include page__meta.html %} <!--소요시간을 띄우는 부분임.-->
+		  
+		  <!--여기서부터 작성해주시면 됩니다.-->
+		 {% if page.read_time %} 
+		  <p class="page__date"><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Updated:" }} <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time></p>
+		  
+		 {% endif %}
+<!--여기서까지 하시면 됩니다.-->	
         </header>
       {% endunless %}
 
