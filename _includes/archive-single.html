@@ -23,8 +23,8 @@
       {% else %}
         <a href="{{ post.url | relative_url }}" rel="permalink">{{ title }}</a>
       {% endif %}
-    </h2>
-    {% include page__meta.html type=include.type %}
+    </h2>	
+    <!--소요시간 띄우는 부분 {% include page__meta.html type=include.type %}  -->
 	
 	<!--여기서부터가 업데이트 날짜를 띄우는 부분-->	
     {% if post.date %}

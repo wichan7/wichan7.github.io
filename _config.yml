@@ -96,9 +96,9 @@ analytics:
 author:
   name             : "강위찬"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "github: **wichan7**"
-  location         : "Seoul"
-  email            : "wichan1255@gmail.com"
+  bio              : "email: **wichan7@naver.com**"
+  location         : ""
+  email            : ""
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
@@ -114,7 +114,7 @@ author:
       # url: "https://facebook.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url: "https://github.com/"
+      url: "https://github.com/wichan7"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
@@ -280,6 +280,8 @@ defaults:
       comments: true
       share: true
       related: true
+      toc: true
+      toc_sticky: true
 
   #>>>>>>>>>>>>>>>>>>> 여기서부터 추가 됨
   # _pages 부분입니다.
