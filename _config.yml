@@ -97,8 +97,8 @@ author:
   name             : "강위찬"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "email: **wichan7@naver.com**"
-  location         : ""
-  email            : ""
+  #location         : "Seoul"
+  #email            : "wichan1255@gmail.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
