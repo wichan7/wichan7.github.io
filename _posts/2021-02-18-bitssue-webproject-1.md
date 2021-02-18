@@ -11,7 +11,7 @@ tags:
 ---
 
 # 1. server.js
---- javascript
+~~~ javascript
 const http = require('http');
 const url = require('url');
 const fs = require('fs');
@@ -43,11 +43,11 @@ http.createServer((request, response) => {
     }
   }
 }).listen(8080);
----
+~~~
 
 
 # 2. db.js
---- javascript
+~~~ javascript
 /* db.js */
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost:27017/test2'); // 기본 설정에 따라 포트가 상이 할 수 있습니다.
@@ -83,10 +83,10 @@ TestModel.find(function(err, models){
 });
 
 TestModel.find({name:/^testIns/});
----
+~~~
 
 # 3. getTweet.js
---- javascript
+~~~ javascript
 var request = require('request');
 
 function getTweets(id, callback) {
@@ -117,4 +117,4 @@ function getTweets(id, callback) {
 }
 
 exports.getTweets = getTweets;
----
+~~~
