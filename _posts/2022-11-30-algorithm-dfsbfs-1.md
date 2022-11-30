@@ -1,5 +1,5 @@
 ---
-title: "[알고리즘] Java로 DFS, BFS구현하기"
+title: "[알고리즘] Javascript로 DFS, BFS구현하기"
 categories: 
   - algorithm
 tags:
