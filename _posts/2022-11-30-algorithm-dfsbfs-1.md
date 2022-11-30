@@ -6,7 +6,7 @@ tags:
   - algorithm
   - dfs
   - bfs
-  - java
+  - javascript
 toc: true
 ---
 # DFS란?  
