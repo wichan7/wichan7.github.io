@@ -157,4 +157,6 @@ function solution(rectangle, characterX, characterY, itemX, itemY) {
 
 도저히 이유를 모르겠어서 검색해봤더니.. 테스트케이스 1번에서 P(3, 5) P(3, 6) 발생하는 반례가 있었다.
 
+반례 해결을 위해 맵 사이즈를 *2 하더라. 
+
 조금만 더 생각해볼걸.. 해결 실패 ㅠㅠ
