@@ -1,5 +1,5 @@
 ---
-title: "[programmers] H-index"
+title: "[programmers] 뉴스 클러스터링"
 categories: 
   - programmers
 tags:
@@ -8,7 +8,9 @@ tags:
 toc: true
 ---
 
-# programmers lv2. H-index
+# programmers lv2. 뉴스 클러스터링
+자카드 유사도를 측정하는 문제다.
+
 ~~~ javascript
 function solution(str1, str2) {
     str1 = str1.toUpperCase();
