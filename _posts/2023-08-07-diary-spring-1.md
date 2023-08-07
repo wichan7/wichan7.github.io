@@ -11,19 +11,22 @@ tags:
 # 개요
 Spring Boot와 관련해 알아보고 작업한 내용을 기록용으로 작성한다.
 
+# 참조
+[JPA, Hibernate의 개념](https://suhwan.dev/2019/02/24/jpa-vs-hibernate-vs-spring-data-jpa/)
+
 # 환경 구성  
 ## Eclipse EE
-[download eclipse 2023-06](https://www.eclipse.org/downloads/packages/installer)
+[download eclipse 2023-06](https://www.eclipse.org/downloads/packages/installer)  
 ## JDK
-[download jdk 20.0.2](https://www.oracle.com/kr/java/technologies/downloads/)
+[download jdk 20.0.2](https://www.oracle.com/kr/java/technologies/downloads/)  
 ## DBeaver
-[download dbeaver latest](https://dbeaver.io/)
+[download dbeaver latest](https://dbeaver.io/)  
 
 # 프로젝트 구성
-## 프로젝트 생성
-1. Help > Eclipse Marketplace > Spring4(a.k.a sts4) 설치
-2. Spring Boot Stater Project 생성
-3. spring security, spring web, spring web services, lombok, gradle, jpa 설치
+## 프로젝트 생성  
+1. Help > Eclipse Marketplace > Spring4(a.k.a sts4) 설치  
+2. Spring Boot Stater Project 생성  
+3. spring security, spring web, spring web services, lombok, gradle, jpa 설치  
 ## gradle 설정
 ``` gradle
 plugins {
@@ -67,7 +70,7 @@ dependencies {
 tasks.named('test') {
 	useJUnitPlatform()
 }
-```
+```  
 ## application.yml 작성
 application.properties를 삭제하고 application.yml을 생성한다.  
 ``` yaml
@@ -83,23 +86,22 @@ spring:
     driver-class-name: org.mariadb.jdbc.Driver
     username: root
     password: 990909
-```
+```  
 
 # DB 구성
 ## Maria Image Pull
-`docker pull mariadb`
+`docker pull mariadb`  
 ## Container run
-1. MARIADB_ROOT_PASSWORD 환경변수 설정
-2. /var/lib/mysql을 마운트
+1. MARIADB_ROOT_PASSWORD 환경변수 설정  
+2. /var/lib/mysql을 마운트  
 ## 직접 접근
-`mysql -u root -p`
+`mysql -u root -p`  
 ## 간접 접근
-`root / {MARIADB_ROOT_PASSWORD} 계정정보로 jdbc:mariadb://localhost:3306/web 접근`
+`root / {MARIADB_ROOT_PASSWORD} 계정정보로 jdbc:mariadb://localhost:3306/web 접근`  
 
 # 빌드와 배포
 ## 빌드
 1. cd {project dir}
-2. gradlew build
-
+2. gradlew build  
 ## 배포
-1. java -jar /build/libs/{.jar file}
+1. java -jar /build/libs/{.jar file}  
