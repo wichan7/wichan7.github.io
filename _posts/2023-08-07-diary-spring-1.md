@@ -32,6 +32,60 @@ Spring Boot와 관련해 알아보고 작업한 내용을 기록용으로 작성
 2. Spring Boot Stater Project 생성  
 3. spring security, spring web, spring web services, lombok, gradle, jpa 설치  
 
+## 디렉토리 구조
+```
+|   .classpath
+|   .gitignore
+|   .project
+|   build.gradle
+|   gradlew
+|   gradlew.bat
+|   HELP.md
+|   settings.gradle
+|
++---.gradle
++---.settings
++---bin
++---build
++---gradle
+|   \---wrapper
+|           gradle-wrapper.jar
+|           gradle-wrapper.properties
+|
+\---src
+    +---main
+    |   +---java
+    |   |   \---com
+    |   |       \---example
+    |   |           \---demo
+    |   |               |   WebdemoApplication.java
+    |   |               |
+    |   |               +---config
+    |   |               +---controller
+    |   |               |       HomeController.java
+    |   |               |
+    |   |               +---domain
+    |   |               |       Board.java
+    |   |               |
+    |   |               +---repository
+    |   |               |       BoardRepository.java
+    |   |               |
+    |   |               \---service
+    |   |                       BoardService.java
+    |   |
+    |   \---resources
+    |       |   application.yml
+    |       |
+    |       +---static
+    |       \---templates
+    \---test
+        \---java
+            \---com
+                \---example
+                    \---demo
+                            WebdemoApplicationTests.java
+```
+
 ## gradle 설정
 ``` gradle
 plugins {
