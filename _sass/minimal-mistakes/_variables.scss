@@ -13,6 +13,9 @@ $paragraph-indent: false !default; // true, false (default)
 $indent-var: 1.3em !default;
 
 /* system typefaces */
+$NanumBarunGothic: NanumBarunGothic !default;
+$NanumBarunGothicBold: NanumBarunGothicBold !default;
+$NanumBarunGothicLight: NanumBarunGothicLight !default;
 $serif: Georgia, Times, serif !default;
 $sans-serif: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI",
   "Helvetica Neue", "Lucida Grande", Arial, sans-serif !default;
@@ -29,9 +32,9 @@ $bodoni: "Bodoni MT", serif !default;
 $calisto: "Calisto MT", serif !default;
 $garamond: Garamond, serif !default;
 
-$global-font-family: $sans-serif !default;
-$header-font-family: $sans-serif !default;
-$caption-font-family: $serif !default;
+$global-font-family: $NanumBarunGothic !default;
+$header-font-family: $NanumBarunGothicBold !default;
+$caption-font-family: $NanumBarunGothicLight !default;
 
 /* type scale */
 $type-size-1: 2.441em !default; // ~39.056px

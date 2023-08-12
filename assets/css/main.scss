@@ -6,3 +6,18 @@
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
+
+@font-face {
+    font-family: 'NanumBarunGothic';
+    src: url('../font/NanumBarunGothic.ttf');
+}
+
+@font-face {
+    font-family: 'NanumBarunGothicBold';
+    src: url('../font/NanumBarunGothicBold.ttf');
+}
+
+@font-face {
+    font-family: 'NanumBarunGothicLight';
+    src: url('../font/NanumBarunGothicLight.ttf');
+}
