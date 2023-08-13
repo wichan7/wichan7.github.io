@@ -8,7 +8,7 @@ tags:
 toc: true
 ---
 
-# programmers lv2. 뉴스 클러스터링
+## programmers lv2. 뉴스 클러스터링
 자카드 유사도를 측정하는 문제다.
 
 ~~~ javascript

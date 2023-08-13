@@ -9,17 +9,17 @@ tags:
   - javascript
 toc: true
 ---
-# DFS란?  
+## DFS란?  
 DFS란 Depth First Search의 약자로 하나의 정점을 깊게 파고들어 탐색하는 방식입니다.  
 스택을 이용하여 구현할 수 있으며, 재귀 함수의 특징을 통한 구현이 일반적입니다.  
 <br>
 
-# BFS란?  
+## BFS란?  
 BFS란 Breadth First Search의 약자로 DFS처럼 하나의 경로를 깊게 탐색하지 않고 넓게 검사합니다.  
 큐를 이용하여 구현할 수 있습니다.
 <br>
 
-# 구현 전체 코드 (Javascript)
+## 구현 전체 코드 (Javascript)
 ~~~ javascript
 class Queue {
     constructor() {

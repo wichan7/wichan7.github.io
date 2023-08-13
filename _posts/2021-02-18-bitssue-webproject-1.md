@@ -10,7 +10,7 @@ tags:
   - API
 ---
 
-# 1. server.js
+## 1. server.js
 ~~~ javascript
 const http = require('http');
 const url = require('url');
@@ -46,7 +46,7 @@ http.createServer((request, response) => {
 ~~~
 
 
-# 2. db.js
+## 2. db.js
 ~~~ javascript
 /* db.js */
 var mongoose = require('mongoose');
@@ -85,7 +85,7 @@ TestModel.find(function(err, models){
 TestModel.find({name:/^testIns/});
 ~~~
 
-# 3. getTweet.js
+## 3. getTweet.js
 ~~~ javascript
 var request = require('request');
 

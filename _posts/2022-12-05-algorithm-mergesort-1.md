@@ -8,11 +8,11 @@ tags:
   - merge sort
 toc: true
 ---
-# 병합 정렬이란?
+## 병합 정렬이란?
 배열을 가장 작은 단위부터 합칩니다.<br>
 분할, 병합 하다 보면(nlogn) 최종적으로 원본 배열이 정렬됩니다.<br>
 
-# 구현 전체 코드 (Javascript)
+## 구현 전체 코드 (Javascript)
 ~~~ javascript
 let array = [0, 2, 1, 3, 7, 6, 4, 8, 5];
 
@@ -39,5 +39,3 @@ function merge(array) {
 
 console.log(merge(array));
 ~~~
-
-감사합니다.
