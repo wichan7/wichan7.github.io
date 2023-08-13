@@ -8,7 +8,7 @@ tags:
 toc: true
 ---
 
-# programmers lv3. 아이템 줍기
+## programmers lv3. 아이템 줍기
 
 1차 
 ~~~ javascript
