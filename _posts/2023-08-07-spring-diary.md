@@ -1,9 +1,9 @@
 ---
 title: "[기록] Spring Boot, Mariadb, JPA, Thymeleaf"
 categories: 
-  - web
-tags:
   - spring
+tags:
+  - web
   - mariadb
   - jpa
 ---
