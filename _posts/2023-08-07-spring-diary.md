@@ -107,7 +107,8 @@ spring:
 
 ### Container run
 1. MARIADB_ROOT_PASSWORD 환경변수 설정  
-2. /var/lib/mysql을 마운트  
+2. MARIADB_DATABASE 환경변수 설정
+3. /var/lib/mysql을 마운트  
 
 ### 직접 접근
 `mysql -u root -p`  
