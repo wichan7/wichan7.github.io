@@ -1,5 +1,5 @@
 ---
-title: "SpringBoot 소스 변경 후 자동 리로드하기 (Feat. devtools)"
+title: "ThymeLeaf 소스 변경 후 자동 리로드하기 (Feat. devtools)"
 categories: 
   - spring
 tags:
