@@ -83,34 +83,43 @@ tags:
 3. 반정규화 적용
 
 ## DDL
-### CREATE TABLE
+### CREATE
 ``` sql
-CREATE TABLE 테이블명(
-  {속성명} {데이터타입} {OPTIONS},
-  CONSTRAINT {제약조건명} [(CHECK, FOREIGN KEY, PRIMARY KEY, UNIQUE...)]
-)
-```
-
-``` sql
+# 테이블 생성
 CREATE TABLE emp(
   emp_no BIGINT PRIMARY KEY,
   emp_address VARCHAR(100),
   CONSTRAINT fk_address FOREIGN KEY(emp_address) REFERENCES addresses(addr) ON DELETE CASCADE
 )
-```
 
-### CREATE INDEX
-``` sql
-CREATE INDEX {인덱스명} ON {테이블명}({컬럼명} {정렬방법});
-```
-
-``` sql
+# 인덱스 생성
 CREATE INDEX idx_empno ON emp(emp_no ASC);
 ```
 
-### ALTER TABLE
+### ALTER  
+``` sql
+# 컬럼, 제약조건 추가
+ALTER TABLE emp ADD COLUMN emp_address varchar(100) NOT NULL;
+ALTER TABLE emp ADD CONSTRAINT fk_address FOREIGN KEY(emp_address) REFERENCES addresses(addr);
 
-### DROP TABLE
+# 컬럼 변경
+ALTER TABLE emp MODIFY COLUMN emp_address varchar(200);
+
+# 컬럼 이름까지 변경
+ALTER TABLE emp CHANGE COLUMN emp_address emp_address2 varchar(300);
+
+# 컬럼, 제약조건 삭제
+ALTER TABLE emp DROP COLUMN emp_address2;
+ALTER TABLE emp DROP CONSTRAINT fk_address;
+
+# 테이블명 변경
+ALTER TABLE emp RENAME emp_new;
+```
+
+### DROP  
+``` sql
+DROP TABLE emp
+```
 
 ### RENAME
 ``` sql
@@ -118,8 +127,15 @@ RENAME emp TO emp_new
 ```
 
 ## DML
+### SELECT
+### INSERT
+### UPDATE
+### DELETE
 
 ## DCL
+### GRANT
+### REVOKE
 
-## TCL
-
+## TCL  
+### COMMIT  
+### ROLLBACK
