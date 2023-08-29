@@ -1,7 +1,7 @@
 ---
 title: "[programmers] 뉴스 클러스터링"
 categories: 
-  - programmers
+  - Algorithm
 tags:
   - algorithm
   - programmers

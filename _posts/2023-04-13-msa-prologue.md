@@ -1,7 +1,7 @@
 ---
 title: "MSA 설계와 구현 - Prologue"
 categories: 
-  - WEB
+  - MSA
 tags:
   - Architecture
   - AWS

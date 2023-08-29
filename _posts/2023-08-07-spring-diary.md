@@ -1,7 +1,7 @@
 ---
 title: "[기록] Spring Boot, Mariadb, JPA, Thymeleaf"
 categories: 
-  - spring
+  - Spring Framework
 tags:
   - web
   - mariadb

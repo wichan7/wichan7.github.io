@@ -1,9 +1,7 @@
 ---
 title: "[Nodejs] Nodejs, MongoDB, TwitterAPI 연동"
 categories: 
-  - nodejs
-  - mongoDB
-  - API
+  - NodeJS
 tags:
   - nodejs
   - mongoDB

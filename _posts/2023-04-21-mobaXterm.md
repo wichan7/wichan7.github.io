@@ -1,7 +1,7 @@
 ---
 title: "네트워크 클라이언트 도구 - MobaXTerm"
 categories: 
-  - tools
+  - Tools
 tags:
   - tools
   - linux

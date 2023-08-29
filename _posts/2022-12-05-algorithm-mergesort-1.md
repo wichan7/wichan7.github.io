@@ -1,7 +1,7 @@
 ---
 title: "[알고리즘] Javascript로 병합 정렬 구현하기"
 categories: 
-  - algorithm
+  - Algorithm
 tags:
   - algorithm
   - javascript

@@ -1,10 +1,9 @@
 ---
 title: "SQLD 출제 범위 및 정리"
 categories: 
-  - sql
+  - Certification
 tags:
   - sqld
-  - certification
 ---
 
 ## 데이터 모델링

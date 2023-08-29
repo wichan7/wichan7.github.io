@@ -1,7 +1,7 @@
 ---
 title: "[programmers] 아이템 줍기"
 categories: 
-  - programmers
+  - Algorithm
 tags:
   - algorithm
   - programmers
