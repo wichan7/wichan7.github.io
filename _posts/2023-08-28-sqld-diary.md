@@ -20,7 +20,7 @@ tags:
 비일관|데이터 중복이 없더라도 비일관성은 발생. 데이터 모델링을 할 때 데이터와 데이터간 상호 연관 관계에 대한 명확한 정의는 이러한 위험을 사전에 예방.  
 
 ### 모델링의 분류
-추상화된 순으로 `개념 모델링 --> 논리 모델링 --> 물리 모델링`  
+추상화된 순으로 `개념 모델링 → 논리 모델링 → 물리 모델링`  
 
 ### ERD 작성 순서
 1. 엔터티를 그린다.  
@@ -82,6 +82,44 @@ tags:
 2. 다른 방법 유도 검토
 3. 반정규화 적용
 
-## SQL 기본
+## DDL
+### CREATE TABLE
+``` sql
+CREATE TABLE 테이블명(
+  {속성명} {데이터타입} {OPTIONS},
+  CONSTRAINT {제약조건명} [(CHECK, FOREIGN KEY, PRIMARY KEY, UNIQUE...)]
+)
+```
 
-## SQL 활용
+``` sql
+CREATE TABLE emp(
+  emp_no BIGINT PRIMARY KEY,
+  emp_address VARCHAR(100),
+  CONSTRAINT fk_address FOREIGN KEY(emp_address) REFERENCES addresses(addr) ON DELETE CASCADE
+)
+```
+
+### CREATE INDEX
+``` sql
+CREATE INDEX {인덱스명} ON {테이블명}({컬럼명} {정렬방법});
+```
+
+``` sql
+CREATE INDEX idx_empno ON emp(emp_no ASC);
+```
+
+### ALTER TABLE
+
+### DROP TABLE
+
+### RENAME
+``` sql
+RENAME emp TO emp_new
+```
+
+## DML
+
+## DCL
+
+## TCL
+
