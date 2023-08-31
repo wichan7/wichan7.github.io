@@ -149,5 +149,6 @@ RENAME emp TO emp_new
 ### ROLLBACK
 
 ## 추가 팁
+* Mariadb:latest 이미지로 공부했는데, group by 시 maria의 느슨한 검사 때문에, ANSI 표준을 맞출 수 있도록 `SET sql_mode = 'ONLY_FULL_GROUP_BY';` 설정해주었다.  
 * Null 데이터와 연산 시(+, - 등) null로 반환된다.  
 * Oracle은 ''로 데이터를 입력하면 null로 변환된다.  
