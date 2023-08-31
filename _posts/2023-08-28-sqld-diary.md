@@ -147,3 +147,7 @@ RENAME emp TO emp_new
 ## TCL  
 ### COMMIT  
 ### ROLLBACK
+
+## 추가 팁
+* Null 데이터와 연산 시(+, - 등) null로 반환된다.  
+* Oracle은 ''로 데이터를 입력하면 null로 변환된다.  
