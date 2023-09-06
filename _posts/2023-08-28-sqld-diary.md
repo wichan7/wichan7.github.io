@@ -135,20 +135,57 @@ RENAME emp TO emp_new
 ```
 
 ## DML
-### SELECT
-### INSERT
-### UPDATE
-### DELETE
+### SELECT 구문의 실행 순서  
+FROM → WHERE → GROUP BY → HAVING → SELECT → ORDER BY  
+
+### SELECT 구문 - CASE WHEN THEN
+[참조](https://wichan7.github.io/certification/sqld-case-expression/)  
+
+### SELECT 구문 - START WITH CONNECT BY
+
+### SELECT 구문 - Windowing (OVER, Partition by, ...)
+
+### INSERT 구문 기본
+``` sql
+INSERT INTO emp(emp_no, sal, ...) VALUES (1, 3700, ...);
+```
+
+### UPDATE 구문 기본
+``` sql
+UPDATE emp SET sal = 3800 WHERE emp_no = 1;
+```
+
+### UPDATE 구문 - Set SubQuery
+
+### DELETE 구문 기본
+``` sql
+DELETE FROM emp WHERE emp_no = 1;
+```
 
 ## DCL
 ### GRANT
+``` sql
+# 권한을 부여하고, 다른사용자에게 같은 권한을 부여할 수 있도록 함.  
+GRANT SELECT, INSERT, DELETE ON emp TO user1 WITH GRANT OPTION;
+```
+
 ### REVOKE
+``` sql
+# 권한을 회수함. user1이 누군가에게 권한을 줬다면, cascade option으로 함께 회수
+REVOKE SELECT, INSERT, DELETE ON emp TO user1 CASCADE;
+```
 
 ## TCL  
 ### COMMIT  
-### ROLLBACK
+### ROLLBACK  
 
-## 추가 팁
+## 추가 팁  
+### 공부 시 참고자료
 * Mariadb:latest 이미지로 공부했는데, group by 시 maria의 느슨한 검사 때문에, ANSI 표준을 맞출 수 있도록 `SET sql_mode = 'ONLY_FULL_GROUP_BY';` 설정해주었다.  
+* SQLD 시험 2시간 요약 바로가기: [김강민님 유튜브](https://www.youtube.com/watch?v=PC3ypt_VGWI&t=1843s)
+* SQL 자격검정 실전문제(노랭이책) 구매하기: [교보문고](https://product.kyobobook.co.kr/detail/S000001399867)  
+
+### NULL
 * Null 데이터와 연산 시(+, - 등) null로 반환된다.  
 * Oracle은 ''로 데이터를 입력하면 null로 변환된다.  
+* SQL Server는 Null 값이 `+∞`, Oracle은 `-∞`  
