@@ -23,10 +23,22 @@ CASE {variable}
 
 ## 사용 예  
 SELECT 결과를, 조건에 따라 보여주고 싶을 때 사용할 수 있다.  
+
+`simple`  
 ``` sql
 SELECT emp_no, (CASE emp_no
   WHEN 1001 THEN 'Y'
   WHEN 1003 THEN 'Y'
+  ELSE 'N' END
+  ) AS 'vip_yn'
+FROM emp
+```
+
+`searched`
+``` sql
+SELECT emp_no, (CASE 
+  WHEN emp_no=1001 THEN 'Y'
+  WHEN emp_no=1003 THEN 'Y'
   ELSE 'N' END
   ) AS 'vip_yn'
 FROM emp
