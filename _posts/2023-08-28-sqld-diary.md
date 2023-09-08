@@ -142,8 +142,16 @@ FROM → WHERE → GROUP BY → HAVING → SELECT → ORDER BY
 [참조](https://wichan7.github.io/certification/sqld-case-expression/)  
 
 ### SELECT 구문 - START WITH CONNECT BY
+```
+SELECT *
+FROM emp
+START WITH manager IS NULL
+CONNECT BY PRIOR emp_no = manager
+```
 
 ### SELECT 구문 - Windowing (OVER, Partition by, ...)
+
+### SELECT 구문 - Rollup, Cube, Grouping Sets
 
 ### INSERT 구문 기본
 ``` sql
