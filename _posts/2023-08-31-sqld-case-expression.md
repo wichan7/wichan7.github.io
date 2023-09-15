@@ -1,7 +1,7 @@
 ---
 title: "SQL의 Case Expression (Feat. SQLD)"
 categories: 
-  - Certification
+  - SQL
 tags:
   - sqld
 ---

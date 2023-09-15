@@ -1,7 +1,7 @@
 ---
 title: "SQLD 출제 범위 및 정리"
 categories: 
-  - Certification
+  - SQL
 tags:
   - sqld
 ---

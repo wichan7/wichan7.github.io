@@ -1,7 +1,7 @@
 ---
 title: "RDBMS의 묵시적인 형변환 (Feat. SQLD)"
 categories: 
-  - Certification
+  - SQL
 tags:
   - sqld
 ---
