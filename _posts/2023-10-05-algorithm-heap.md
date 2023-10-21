@@ -111,4 +111,4 @@ pop 함수의 시간 복잡도가 O ( logN )임을 알 수 있다.
 기본 javascript에는 heap이나 STL의 priority_queue가 제공되지 않아, 직접 구현해야만 한다.  
 요것 뿐만이 아니라, combination, permutation, queue ...등 직접 구현해왔다.  
 
-코딩 테스트 응시 중에 이걸 언제 구현하고 있을까... 파이썬으로 run??
+코딩 테스트 응시 중에 이걸 언제 구현하고 있을까...
