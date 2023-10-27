@@ -84,6 +84,11 @@ GraphQL은 스펙일 뿐이어서, 누가 만든 구현체를 가져와서 활�
 
 목표는 GraphQL의 이해이기 때문에 실제 Database를 연결하지는 않고, 메모리 상에서만 데이터가 유지된다.  
 
+## Apollo Server 패키지 설치
+``` shell
+npm install apollo-server
+```
+
 ## server.js
 ``` javascript
 import { ApolloServer, gql } from "apollo-server";
@@ -197,3 +202,13 @@ export const db = {
     tweets, users
 };
 ```
+
+아폴로를 이용한 GraphQL 서버를 실행하는데에는 typeDef와 resolver가 필수적인 인자이다.  
+
+typeDef는 Mongoose와 같이, 미리 데이터들의 타입을 정의하는 항목이다.  
+Query의 경우 조회에 대한 명세이고, Mutation의 경우 말 그대로 데이터의 상태가 변경될 여지가 있는 경우에 대한 명세이다.  
+
+resolver는 실제 데이터 처리하는 로직에 대한 작성부이다.  
+예제에서 보듯 resolver에 def를 override하는 경우, 해당 데이터에 대한 처리를 중간에 핸들링할 수 있다.  
+
+실제로 Query에 조금만 익숙해지면, 정말 간단하게 원하는 데이터를 얻을 수 있다.  
