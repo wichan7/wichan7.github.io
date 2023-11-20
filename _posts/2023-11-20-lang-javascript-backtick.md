@@ -41,7 +41,7 @@ fun`funny javascript`
 다음 예제를 보자.  
 ``` javascript
 const name = 'wichan'
-const age = 5
+const age = 25
 
 function intro(strings, ...values) {
     console.log(strings)
@@ -57,3 +57,22 @@ intro`my name is ${name} and i am ${age} years old.`
 
 백틱으로 함수를 호출하는 경우 첫번째 인자로 raw string, 그 이후로 template들을 리턴해준다.  
 함수에 문자열을 입력할 때, 템플릿 변수와 문자열을 분리할 때 사용할 수 있다.  
+
+### 숨은 기능이 하나 더 있다.  
+사실 태그드 템플릿에는 숨겨진 기능이 하나 더 있다.  
+``` javascript
+function fun(strings) {
+  console.log(strings)
+  console.log(strings.raw)
+}
+
+/** result:
+ * [ 'directory: C:System32etc...' ]
+ * [ 'directory: C:\\System32\\etc...' ]
+ */
+fun`directory: C:\System32\etc...`
+```
+
+escaping 되지 않은 원본 문자열을 보여준다.  
+
+끝
