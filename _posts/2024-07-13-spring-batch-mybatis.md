@@ -29,42 +29,88 @@ application.yml에서는 여러개의 datasource 설정을 지원하지 않는�
 ```yaml
 # application.yml
 spring:
-  ...
-  ...
+  application:
+    name: my-batch
+  batch:
+    jdbc:
+      initialize-schema: never
+    job:
+      name: ${job.name:NONE}
   datasource:
-    ... # 삭제
     batch:
-      ... # 추가
-    mybatis:
-      ... # 추가
+      jdbc-url: jdbc:mysql://{batch-database-uri}/batch
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      username: batch
+      password: batch123
+    service:
+      jdbc-url: jdbc:mysql://{service-database-uri}/service
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      username: service
+      password: service123
 ```
 
 ```java
 // com.dev.wichan.config.DataSourceConfig
 @Configuration
 public class DataSourceCOnfig {
-  ...
+
   @Bean
   @Primary
-  public ...() {
+  @ConfigurationProperties(prefix="spring.datasource.batch")
+  public HikariConfig batchHikariConfig() {
+      return new HikariConfig();
+  }
 
+  // 스프링 기본 데이터소스로 사용할 batchDatasource 생성
+  @Bean
+  @Primary
+  @Qualifier("batchDataSource")
+  public DataSource batchDataSource() {
+      return new HikariDataSource(batchHikariConfig());
   }
 
   @Bean
-  @Qualifier("mybatisDatasource")
-  public ...() {
+  @ConfigurationProperties(prefix="spring.datasource.service")
+  public HikariConfig serviceHikariConfig() {
+      return new HikariConfig();
+  }
 
+  // Mybatis에서 사용할 serviceDataSource 빈 생성
+  @Bean
+  @Qualifier("serviceDataSource")
+  public DataSource serviceDataSource() {
+      return new HikariDataSource(serviceHikariConfig());
   }
 }
 ```
 
 ### 2. Mybatis Datasource 변경
 
+Qualifier 어노테이션으로 마이바티스에서 사용할 데이터소스 지정
+
 ```java
 // com.dev.wichan.config.MyBatisConfig
 @Configuration
-public class MybatisDataSource {
-  ...
+public class MybatisConfig {
+
+  @Primary
+  @Bean
+  public SqlSessionFactory sqlSessionFactory (
+    @Qualifier("serviceDataSource") DataSource dataSource,
+    ApplicationContext applicationContext
+  ) throws Exception {
+    SqlSessionFactoryBean sessionFactoryBean = new SqlSessionFactoryBean();
+    sessionFactoryBean.setDataSource(dataSource);
+    sessionFactoryBean.setMapperLocations(applicationContext.getResources("classpath:mapper/**/*.xml"));
+
+    org.apache.ibatis.session.Configuration mybatisConfig = new org.apache.ibatis.session.Configuration();
+    mybatisConfig.setMapUnderscoreToCamelCase(true);
+    mybatisConfig.setDefaultExecutorType(ExecutorType.BATCH);
+
+    sessionFactoryBean.setConfiguration(mybatisConfig);
+    return sessionFactoryBean.getObject();
+  }
+
 }
 
 ```
