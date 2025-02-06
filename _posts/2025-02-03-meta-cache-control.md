@@ -32,3 +32,22 @@ HTML5 스펙만을 기준으로 구현하는 브라우저의 경우 해당 내�
 
 ## 그래서 어떻게 하라고?
 웹서버가 cache-control 관련 http 헤더를 설정하는 정석적인 방법으로 구현해라.
+
+
+### 예시 (nginx)
+``` conf
+    location /static {
+        root   /usr/share/nginx/html;
+        try_files $uri $uri/ =404;
+    }
+
+    location / {   # here
+        root   /usr/share/nginx/html;
+        index  index.html index.htm;
+        try_files $uri $uri/ /index.html;
+  
+        add_header Cache-Control 'no-store, no-cache';
+        expires off;
+        etag off;
+    }
+```
