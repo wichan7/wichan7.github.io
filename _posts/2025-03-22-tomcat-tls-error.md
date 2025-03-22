@@ -6,7 +6,6 @@ categories:
 tags:
   - Tomcat
   - Springboot
-toc: true
 ---
 
 Tomcat에서 TLS를 설정하면서 발생한 메시지인데, 구글이나 스택 오버플로우를 찾아봐도 잘 안나와서 내가 쓴다.  
