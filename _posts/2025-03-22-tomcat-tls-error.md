@@ -1,5 +1,5 @@
 ---
-title: "[Troubleshooting] Private key must be accompanied by certificate chain"
+title: "[TroubleShoot] Private key must be accompanied by certificate chain"
 categories:
   - Tomcat
   - Springboot
