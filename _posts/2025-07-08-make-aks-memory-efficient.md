@@ -77,7 +77,7 @@ MEM/Allocatable: **5346MiB**
 
 ### 2. 물리 메모리 증대 (scale-up)
 
-유휴 상태의 CPU 리소스가 많음 (9% 사용 중)
+유휴 상태의 CPU 리소스가 많음 (9% 사용 중)  
 메모리 집약적 VM 선택으로 노드 수 감축 및 비용 효율화
 
 - 참고사항
@@ -91,17 +91,15 @@ MEM/Allocatable: **5346MiB**
 
 ### max-pods-per-node
 
----
-
 운영 중인 클러스터 내의 파드 수 및 향후 생길 애플리케이션들을 고려하여 설정해야 함.
 
-- 클러스터 운영을 위한 기본 생성되는 파드(kube-system ns)가 존재함. ( 10 pods / node )
+- 클러스터 운영을 위한 기본 생성되는 파드(kube-system ns)가 존재함. ( 10 pods / node )  
 파드 당 100MiB 이내
-- Spring Application
+- Spring Application  
 파드 당 최소 300MiB의 메모리를 요구
-- Nginx ( *2 )
+- Nginx ( *2 )  
 파드 당 100MiB 이내의 메모리를 요구
-- Elasticsearch ( *3 )
+- Elasticsearch ( *3 )  
 파드 당 2GiB 메모리를 요구
 
 ```
@@ -114,5 +112,5 @@ kube-system, nginx, spring 등을 포함한 총 pod 수: 10 + 2 + 3 + 25.47
 = 40.47
 ```
 
-추후 spring pod 만 추가하는 경우, max-pods : 40 설정으로 커버가 가능.
+추후 spring pod 만 추가하는 경우, max-pods : 40 설정으로 커버가 가능.  
 ⇒ spring 이외에 메모리를 덜 사용하는 애플리케이션이 추가되는 경 고려하여 50으로 설정
